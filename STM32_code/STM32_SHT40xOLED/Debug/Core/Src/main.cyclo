@@ -1,0 +1,11 @@
+../Core/Src/main.c:41:6:display_test	1
+../Core/Src/main.c:55:6:OLED_ShowTempHum	1
+../Core/Src/main.c:80:6:OLED_ShowTempHum_BIG	1
+../Core/Src/main.c:102:6:ShowNormalScreen	1
+../Core/Src/main.c:115:6:ShowSleepScreen	1
+../Core/Src/main.c:201:9:SHT40_CRC8	4
+../Core/Src/main.c:211:9:SHT40_Read	5
+../Core/Src/main.c:235:6:OLED_BreathEffect	4
+../Core/Src/main.c:284:5:main	16
+../Core/Src/main.c:445:6:SystemClock_Config	3
+../Core/Src/main.c:490:6:Error_Handler	1
