@@ -89,14 +89,11 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 
 <img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/b3df9c0f-fb48-40ad-8f1b-3c3b31612042" />
 
-<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/eaca759b-2669-4070-bb5a-194bc4713edd" />
+<img src="https://raw.githubusercontent.com/BoomerChiao/STM32_business_card/main/JPG/OLED_DISPLAY.gif" width="400" alt="OLED Demo" />
 
-<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/cc738cb0-19ef-44e8-9374-1f5e29f60973" />
+<img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_A.gif" width="400" alt="OLED Demo" />
 
-<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/a2e2fee5-813e-4f07-8005-162d090167e0" />
-
-
-
+<img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_B.gif" width="400" alt="OLED Demo" />
 
 
 是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，
