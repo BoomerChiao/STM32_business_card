@@ -83,18 +83,34 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
    -  按下「Run」◀️ 或「Debug」🐞 就能直接下載程式
   
 ##  Software Presentation　（成品展示）
+### OLED畫面
+<img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/b3df9c0f-fb48-40ad-8f1b-3c3b31612042" />
+
+- 上圖為主畫面，提供溫度及濕度和最高溫與最低溫相關資訊
+   -  溫度計符號「🌡️」為 攝氏溫度
+   -  水滴符號「💧」為 濕度
+   -  Temp 下面「H」英文為high，專門紀錄目前探測到最高溫度；而「L」英文為low，負責記錄目前探測到最低溫度
 
 
 <img width="539" height="504" alt="image" src="https://github.com/user-attachments/assets/95dd5113-53ad-46a7-bd05-6981e4adb522" />
 
-<img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/b3df9c0f-fb48-40ad-8f1b-3c3b31612042" />
+- 上圖為子畫面，提供最基本溫度及濕度顯示
 
+
+### OLED顯示功能與視覺效果
 <img src="https://raw.githubusercontent.com/BoomerChiao/STM32_business_card/main/JPG/OLED_DISPLAY.gif" width="400" alt="OLED Demo" />
+
+- 上圖子母畫面正常運轉情況下，亮4秒，滅14秒
+
 
 <img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_A.gif" width="400" alt="OLED Demo" />
 
+- 當負責 PC15 按鈕被觸發時，系統將進入切換 SLEEP 或 NORMAL 畫面；若畫面處於熄滅的狀況下，則會自動喚醒
+
+
 <img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_B.gif" width="400" alt="OLED Demo" />
 
+- 當負責 PB3 按鈕被觸發時，系統將進入切換子母畫面；若畫面處於熄滅的狀況下，則會自動喚醒
 
 是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，
-上面有可愛吉吉商標設計，
+上面有可愛吉吉商標設計，...................................................................
