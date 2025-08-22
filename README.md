@@ -28,9 +28,9 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
       3. 解壓縮.zip 專案檔，直接點擊.project檔案。
          
 4. 完成STM32導入後：
-   - 點擊左側IDE專案，選擇STM32_SHT40xOLED.ioc檔案雙擊兩下開啟
-   - .ioc檔開啟後，點擊上面欄位🔨符號，確認配置偵錯是否可以跑
-   - 偵錯跑完無錯誤，則導入專案成功
+   - 點擊左側IDE專案，選擇STM32_SHT40xOLED.ioc檔案雙擊兩下開啟。
+   - .ioc檔開啟後，點擊上面欄位🔨符號，確認配置偵錯是否可以跑。
+   - 偵錯跑完無錯誤，則導入專案成功。
   
    <img width="421" height="373" alt="image" src="https://github.com/user-attachments/assets/c73b2eec-20de-401f-aa3d-d2e8fefae9c4" />
 
@@ -66,9 +66,9 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 
 ##  Programming STM32 with firmware　（STM32程式代碼燒入）
 1. 工具準備🔧：
-   - ST-LINK V2 (或相容版本)
-   - 4 根杜邦線
-   - STM32 開發板或晶片
+   - ST-LINK V2 (或相容版本)。
+   - 4 根杜邦線。
+   - STM32 開發板或晶片。
     
 2. 硬體接線 (SWD 模式)⚡：
    -  USB_VDD(3.3V) → 3.3V
@@ -77,42 +77,60 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
    -  USB_SWCLK → CLK(A14)
 
 4. 軟體燒錄📥：
-   -  安裝並打開 STM32CubeIDE
-   -  開啟需要燒入專案
+   -  安裝並打開 STM32CubeIDE。
+   -  開啟需要燒入專案。
    -  插入 ST-LINK V2 USB。
-   -  按下「Run」◀️ 或「Debug」🐞 就能直接下載程式
+   -  按下「Run」◀️ 或「Debug」🐞 就能直接下載程式。
   
 ##  Software Presentation　（成品展示）
 ### OLED畫面
 <img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/b3df9c0f-fb48-40ad-8f1b-3c3b31612042" />
 
-- 上圖為主畫面，提供溫度及濕度和最高溫與最低溫相關資訊
-   -  溫度計符號「🌡️」為 攝氏溫度
-   -  水滴符號「💧」為 濕度
-   -  Temp 下面「H」英文為high，專門紀錄目前探測到最高溫度；而「L」英文為low，負責記錄目前探測到最低溫度
+- 上圖為主畫面，提供溫度及濕度和最高溫與最低溫相關資訊。
+   -  溫度計符號「🌡️」為 攝氏溫度。
+   -  水滴符號「💧」為 濕度。
+   -  Temp 下面「H」英文為high，專門紀錄目前探測到最高溫度；而「L」英文為low，負責記錄目前探測到最低溫度。
 
 
 <img width="539" height="504" alt="image" src="https://github.com/user-attachments/assets/95dd5113-53ad-46a7-bd05-6981e4adb522" />
 
-- 上圖為子畫面，提供最基本溫度及濕度顯示
+- 上圖為子畫面，提供最基本溫度及濕度顯示。
 
 
 ### OLED顯示功能與視覺效果
 <img src="https://raw.githubusercontent.com/BoomerChiao/STM32_business_card/main/JPG/OLED_DISPLAY.gif" width="400" alt="OLED Demo" />
 
-- 上圖子母畫面正常運轉情況下，亮4秒，滅14秒
+- 上圖子母畫面正常運轉情況下，亮4秒，滅14秒。
 
 
 <img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_A.gif" width="400" alt="OLED Demo" />
 
-- 當負責 PC15 按鈕被觸發時，系統將進入切換 SLEEP 或 NORMAL 畫面；若畫面處於熄滅的狀況下，則會自動喚醒
+- 當負責 PC15 按鈕被觸發時，系統將進入切換 SLEEP 或 NORMAL 畫面；若畫面處於熄滅的狀況下，則會自動喚醒。
 
 
 <img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_B.gif" width="400" alt="OLED Demo" />
 
-- 當負責 PB3 按鈕被觸發時，系統將進入切換子母畫面；若畫面處於熄滅的狀況下，則會自動喚醒
+- 當負責 PB3 按鈕被觸發時，系統將進入切換子母畫面；若畫面處於熄滅的狀況下，則會自動喚醒。
 
 ##  Advanced Design　（進階設計）
+為了製作卡片型態的 MCU 開發板，我們必需採用 PCB 印刷技術，可適當加入個人資訊，以得到具個性化的卡片設計。
 
-是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，
-上面有可愛吉吉商標設計，...................................................................
+您可在此下載 Gerber 檔案，並上傳至 JLCPCB 進行 PCB 訂製
+- Gerber：
+- JLCPCB：https://jlcpcb.com/
+
+您也可在此下載原理圖及 PCB 檔案，以進行後續編輯。
+- oshwlab：
+
+###  Circuit Design （電路設計）
+<img width="1232" height="501" alt="image" src="https://github.com/user-attachments/assets/f2a6128e-d109-48aa-83f8-46c9dd47f660" />
+
+<img width="1000" height="728" alt="image" src="https://github.com/user-attachments/assets/51f0591b-324f-4e55-8a69-b93d5b75a86b" />
+
+###  PCB layout （電路布局）
+<img width="2463" height="734" alt="image" src="https://github.com/user-attachments/assets/0cf20894-3976-49c8-a5de-3a7fde95ad22" />
+
+
+這是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，上面有可愛吉吉商標設計，
+
+
