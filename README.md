@@ -28,12 +28,12 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
       3. 解壓縮.zip 專案檔，直接點擊.project檔案。
          
 4. 完成STM32導入後：
-   - 插入 ST-LINK V2 USB。
-   - 確認 ST-LINK 連線是否連接燒入線
-      1. USB_VDD(3.3V) → 3.3V
-      2. USB_GND → GND
-      3. USB_SWDIO → DIO(A13)
-      4. USB_SWCLK → CLK(A14)
+   - 點擊左側IDE專案，選擇STM32_SHT40xOLED.ioc檔案雙擊兩下開啟
+   - .ioc檔開啟後，點擊上面欄位🔨符號，確認配置偵錯是否可以跑
+   - 偵錯跑完無錯誤，則導入專案成功
+  
+   <img width="421" height="373" alt="image" src="https://github.com/user-attachments/assets/c73b2eec-20de-401f-aa3d-d2e8fefae9c4" />
+
 
 
 ##  Prepare Electronic Materials　（準備電子材料）
@@ -41,17 +41,78 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 2. STM32G030F6P6 Mini Development or STM32G030F6P6 
 3. 0.96' OLED Display 128×64 4Pin IIC I2C
 4. SHT40 (3.3V)
-5. Jumper Wires
+5. button switch 4 pin 6×6×4.5mm *2
+6. Jumper Wires
 
-<img width="1272" height="509" alt="image" src="https://github.com/user-attachments/assets/e86c9bad-4899-4e23-9991-dc41d4910793" />
-
+<img width="1291" height="933" alt="image" src="https://github.com/user-attachments/assets/5296084b-6683-4ffd-9939-0d240719a148" />
 
 ##  Pin wiring　（引腳接線）
 以下提供基礎引腳接線方式，請依據你的成品需求進行接線。
 
 下圖分別展示 OLED Display 與 SHT40 的接線方式。
+- 請注意，該板子設計僅持支援 3V 電壓範圍。因此，建議將 VCC 預設為 3V 電源以確保正常運作。
+- STM32G030F6P6 Mini Development: PC14 (SDA) ; PB7 (SCL) ; PB3 (Switch A) ; PC15 (Switch B)
+- SHT40: SDA (PC14) ; SCL (PB7)
+- OLED Display: SDA (PC14) ; SCL (PB7)
+- Switch A: A (GND) ; B (PB3)
+- Switch B: A (GND) ; B (PC15)
+
+<img width="466" height="178" alt="image" src="https://github.com/user-attachments/assets/f4e0aed0-f5c4-40f6-86e4-75048d66b856" />
+
+<img width="618" height="143" alt="image" src="https://github.com/user-attachments/assets/2ed7f07d-182b-4b3c-823c-9bb49474049a" />
 
 
+<img width="445" height="307" alt="image" src="https://github.com/user-attachments/assets/3d73f53a-b735-4b50-8107-3fc33a6771e7" />
+
+##  Programming STM32 with firmware　（STM32程式代碼燒入）
+1. 工具準備🔧：
+   - ST-LINK V2 (或相容版本)
+   - 4 根杜邦線
+   - STM32 開發板或晶片
+    
+2. 硬體接線 (SWD 模式)⚡：
+   -  USB_VDD(3.3V) → 3.3V
+   -  USB_GND → GND
+   -  USB_SWDIO → DIO(A13)
+   -  USB_SWCLK → CLK(A14)
+
+4. 軟體燒錄📥：
+   -  安裝並打開 STM32CubeIDE
+   -  開啟需要燒入專案
+   -  插入 ST-LINK V2 USB。
+   -  按下「Run」◀️ 或「Debug」🐞 就能直接下載程式
+  
+##  Software Presentation　（成品展示）
+### OLED畫面
+<img width="520" height="530" alt="image" src="https://github.com/user-attachments/assets/b3df9c0f-fb48-40ad-8f1b-3c3b31612042" />
+
+- 上圖為主畫面，提供溫度及濕度和最高溫與最低溫相關資訊
+   -  溫度計符號「🌡️」為 攝氏溫度
+   -  水滴符號「💧」為 濕度
+   -  Temp 下面「H」英文為high，專門紀錄目前探測到最高溫度；而「L」英文為low，負責記錄目前探測到最低溫度
+
+
+<img width="539" height="504" alt="image" src="https://github.com/user-attachments/assets/95dd5113-53ad-46a7-bd05-6981e4adb522" />
+
+- 上圖為子畫面，提供最基本溫度及濕度顯示
+
+
+### OLED顯示功能與視覺效果
+<img src="https://raw.githubusercontent.com/BoomerChiao/STM32_business_card/main/JPG/OLED_DISPLAY.gif" width="400" alt="OLED Demo" />
+
+- 上圖子母畫面正常運轉情況下，亮4秒，滅14秒
+
+
+<img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_A.gif" width="400" alt="OLED Demo" />
+
+- 當負責 PC15 按鈕被觸發時，系統將進入切換 SLEEP 或 NORMAL 畫面；若畫面處於熄滅的狀況下，則會自動喚醒
+
+
+<img src="https://github.com/BoomerChiao/STM32_business_card/blob/main/JPG/OLED_TOOL_B.gif" width="400" alt="OLED Demo" />
+
+- 當負責 PB3 按鈕被觸發時，系統將進入切換子母畫面；若畫面處於熄滅的狀況下，則會自動喚醒
+
+##  Advanced Design　（進階設計）
 
 是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，
-上面有可愛吉吉商標設計，
+上面有可愛吉吉商標設計，...................................................................
