@@ -125,7 +125,15 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 ###  Circuit Design （電路設計）
 <img width="1232" height="501" alt="image" src="https://github.com/user-attachments/assets/f2a6128e-d109-48aa-83f8-46c9dd47f660" />
 
+- 左側 MCU 採用 STM32G 系列晶片，並選擇 TSSOP20 封裝，便於手工焊接完成。
+- USB 供電部分採用 HT7333-3 LDO 穩壓器，具備低功耗特性，同時也支援較高電壓輸入，方便各式電壓源輸入。
+- 主感測器晶片選擇使用 Sensirion SHT40 ，低功耗溫濕度感測器，該感測器已廣泛應用在市售設備中，具備一定高穩定性；而副感測器則採用 DS18B20 。
+
 <img width="1000" height="728" alt="image" src="https://github.com/user-attachments/assets/51f0591b-324f-4e55-8a69-b93d5b75a86b" />
+
+- 備用電源則使用 CR2032 鈕扣電池作為攜帶式備用電源，確保在無 USB 供電情況下仍能可使用其他方案供電。
+- 互動式按鈕則採用 Rotary Wheel Switch ，取代傳統按鈕設計，提供更方便操作體驗。
+
 
 ###  PCB layout （電路布局）
 <img width="2463" height="734" alt="image" src="https://github.com/user-attachments/assets/0cf20894-3976-49c8-a5de-3a7fde95ad22" />
