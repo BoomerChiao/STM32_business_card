@@ -113,6 +113,7 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 - 當負責 PB3 按鈕被觸發時，系統將進入切換子母畫面；若畫面處於熄滅的狀況下，則會自動喚醒。
 
 ##  Advanced Design　（進階設計）
+這是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，上面有可愛吉吉商標設計。
 為了製作卡片型態的 MCU 開發板，我們必需採用 PCB 印刷技術，可適當加入個人資訊，以得到具個性化的卡片設計。
 
 您可在此下載 Gerber 檔案，並上傳至 JLCPCB 進行 PCB 訂製
@@ -142,43 +143,43 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 1. SMD MLCC 
    - C1、C4、C5、C6、C7：100nF-1206 or N/A 
    - C2、C3：10uF-1206
-   
 
 2. SMD Resistors
    - R1、R2、R3、R4、R5、R6、R7、R8、R15、R16：0Ω-0805
    - R9、R17、R18：10kΩ-0805
    - R10、R11：1kΩ-0805
    - R12、R13、R14：4.7kΩ-0805 or N/A
-  
-   
 
 3. SMD Active component
    - D1、D3：1N4007 or M7
-   - D1：SMBJ6.0CA or N/A
-   - U8：IP5306
-   - U2：AMS1117-3.3
+   - U1：STM32G030F6P6TR or STM32G031F8P6
+   - U2：HT7333-3 (SOT89)
+   - U3：SHT40
+   - U4：DS18B20 or N/A
   
 4. SMD LED
-   - LED1、LED2、LED3、LED4：LED-1206 (XL-3216UGC)
+   - LED1、LED2：LED-1206 (XL-3216UGC)
 
-5. SMD Inductor
-   - L1：0650-1.0UH (CXP0650-1R0M-AG(1.0uh))
-   - L2：1206-Ferrite Beads (CBW321609U800T)
-   
+5. Button switch 
+   - SW1：(DIP) button switch 4 pin 6×6×4.5mm
+   - U5：(SMD) XUNPU QS-301-AGS5P
+
 6. DIP and SMD Connectors 
-   - CN1：SMD P=1.25mm、1x8P、Surface Mount，Right Angle (YIYUAN YTC-A1251-08ABW)
-   - U1、U2、U4、U5、U6：DIP 2.54mm Plugin 1x4P Female Headers (BX-PM2.54-1-4PY)
-   - U7：DIP 2.54mm Plugin 1x6P Female Headers (BX-PM2.54-1-6PY)
-   - U9：DIP 2.54mm Plugin 3P Straight 1x3P Pin Headers or 3P slide switch (BX-PZ2.54-1-3PZZ) or (3Pin Slide Switches-SPDT)
-   - U10、U11：DIP 6x6x7mm With bracket Tactile Switches (ZX-QC66-7.0ZJ)
-   - U11：N/A
+   - H1、H2：DIP 2.54mm Plugin 1x12P Pin Headers (HB-PH3-254112PB2GOP)
+   - H3、H12、H15：DIP 2.54mm Plugin 1x4P Pin Headers (HB-PH3-25414PB2GOP)
+   - H5：DIP 2.54mm Plugin 1x2P Pin Headers (PZ254V-11-02P)
+   - H4、H6、H7：DIP 2.54mm Plugin 1x4P Female Headers (BX-PM2.54-1-4PY)
+   - H8、H9、H10：SMD CONN HEADER 4POS 2.54mm SINGLE ROW SMD (X6511WVS-04H-C60D48R1) or N/A
+   - H11：SMD CONN HEADER 8POS 2.54mm SINGLE ROW SMD (X6511WVS-08H-C60D48R2) or N/A
+   - H13：N/A
+   - H14：DIP 2.54mm Plugin 3P Straight 1x3P Pin Headers or 3P slide switch (BX-PZ2.54-1-3PZZ) or (3Pin Slide Switches-SPDT)
+   
 
 7. Power Connector
-   - USB：SMD TYPE-C 6Pin (KH-TYPE-C-6P-T)
+   - BT1：Q&J CR2032 3V
 
 
 
 
-這是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，上面有可愛吉吉商標設計，
 
 
