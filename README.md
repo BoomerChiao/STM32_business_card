@@ -138,6 +138,46 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 ###  PCB layout （電路布局）
 <img width="2463" height="734" alt="image" src="https://github.com/user-attachments/assets/0cf20894-3976-49c8-a5de-3a7fde95ad22" />
 
+###  PCB Prepare Electronic Materials　（PCB準備電子材料）
+1. SMD MLCC 
+   - C1、C4、C5、C6、C7：100nF-1206 or N/A 
+   - C2、C3：10uF-1206
+   
+
+2. SMD Resistors
+   - R1、R2、R3、R4、R5、R6、R7、R8、R15、R16：0Ω-0805
+   - R9、R17、R18：10kΩ-0805
+   - R10、R11：1kΩ-0805
+   - R12、R13、R14：4.7kΩ-0805 or N/A
+  
+   
+
+3. SMD Active component
+   - D1、D3：1N4007 or M7
+   - D1：SMBJ6.0CA or N/A
+   - U8：IP5306
+   - U2：AMS1117-3.3
+  
+4. SMD LED
+   - LED1、LED2、LED3、LED4：LED-1206 (XL-3216UGC)
+
+5. SMD Inductor
+   - L1：0650-1.0UH (CXP0650-1R0M-AG(1.0uh))
+   - L2：1206-Ferrite Beads (CBW321609U800T)
+   
+6. DIP and SMD Connectors 
+   - CN1：SMD P=1.25mm、1x8P、Surface Mount，Right Angle (YIYUAN YTC-A1251-08ABW)
+   - U1、U2、U4、U5、U6：DIP 2.54mm Plugin 1x4P Female Headers (BX-PM2.54-1-4PY)
+   - U7：DIP 2.54mm Plugin 1x6P Female Headers (BX-PM2.54-1-6PY)
+   - U9：DIP 2.54mm Plugin 3P Straight 1x3P Pin Headers or 3P slide switch (BX-PZ2.54-1-3PZZ) or (3Pin Slide Switches-SPDT)
+   - U10、U11：DIP 6x6x7mm With bracket Tactile Switches (ZX-QC66-7.0ZJ)
+   - U11：N/A
+
+7. Power Connector
+   - USB：SMD TYPE-C 6Pin (KH-TYPE-C-6P-T)
+
+
+
 
 這是由超可愛寶寶的超可愛帥氣男友兼未來老公的吉吉阿奇爸爸所設計，上面有可愛吉吉商標設計，
 
