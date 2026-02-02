@@ -117,7 +117,7 @@ STM32 business card 是由 STMicroelectronics 旗下的 STM32G030 系列微控�
 為了製作卡片型態的 MCU 開發板，我們必需採用 PCB 印刷技術，可適當加入個人資訊，以得到具個性化的卡片設計。
 
 您可在此下載 Gerber 檔案，並上傳至 JLCPCB 進行 PCB 訂製
-- Gerber：
+- Gerber：https://github.com/BoomerChiao/STM32_business_card/tree/main/PCB
 - JLCPCB：https://jlcpcb.com/
 
 您也可在此下載原理圖及 PCB 檔案，以進行後續編輯。
